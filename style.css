@@ -180,6 +180,11 @@ body {
     font-size: 16px;
     font-family: inherit;
     width: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tipo-categoria {
+    border: none;
 }
 
 
