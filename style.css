@@ -1,15 +1,37 @@
+@font-face {
+    font-family: "Market Sans"; /* O nome que você vai dar para a fonte */
+    src: url("fonts/MarketSans-Regular-WebS.woff2") format("opentype"); /* O caminho até o arquivo */
+    font-weight: 400;
+}
+
+body {
+    font-family: "Market Sans", Arial, Helvetica, sans-serif;
+}
+
 .meu-cabecalho {
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    font-size:13.5px;
-    font-family: "Market Sans", Helvetica, sans-serif
+    padding: 0 180px;
+    font-size: .75rem;;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 8px;
+    color: #191919;
+    gap: 3px;
 }
 
 .ofertas {
     margin-left: 30px;
+    text-decoration: none;
+    color: black;
 }
 
 .ajuda-contato {
     margin-left: 20px;
+    text-decoration: none;
+    color: black;
 }
+
+.bandeira {
+    margin-left: auto;
+}
+
