@@ -1,0 +1,15 @@
+.meu-cabecalho {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size:13.5px;
+    font-family: "Market Sans", Helvetica, sans-serif
+}
+
+.ofertas {
+    margin-left: 30px;
+}
+
+.ajuda-contato {
+    margin-left: 20px;
+}
