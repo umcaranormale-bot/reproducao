@@ -1,6 +1,12 @@
 @font-face {
-    font-family: "Market Sans"; /* O nome que você vai dar para a fonte */
-    src: url("fonts/MarketSans-Regular-WebS.woff2") format("opentype"); /* O caminho até o arquivo */
+    font-family: "Market Sans"; 
+    src: url("fonts/MarketSans-Regular-WebS.woff2") format("opentype"); 
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Market Sans Bold"; 
+    src: url("fonts/MarketSans-Bold-WebS.woff2") format("opentype"); 
     font-weight: 400;
 }
 
@@ -11,8 +17,9 @@ body {
 .meu-cabecalho {
     display: flex;
     align-items: center;
+    margin-top: 5px;
     padding: 0 180px;
-    font-size: .75rem;;
+    font-size: .73rem;;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 8px;
     color: #191919;
@@ -32,6 +39,59 @@ body {
 }
 
 .bandeira {
-    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 515px;
+}
+
+.link-entrar {
+    color: #0654ba;
+}
+
+.link-entrar:hover {
+    text-decoration: underline;
+}
+
+.br-portugues {
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
+}
+
+.vender {
+    margin-left: 20px;
+}
+
+.icone-bandeira {
+    width: 20px;
+    height: 20px;
+    object-fit: cover; 
+    border-radius: 2px;
+}
+
+.icone-globo {
+    width: 20px;
+    height: 20px;
+    object-fit: cover; 
+    border-radius: 2px;
+}
+
+.lista-itens {
+    display: flex;
+    align-items: center; /* Centraliza a setinha com a altura do texto */
+    gap: 4px; /* O espacinho entre o 's' e a seta */
+    color: black;
+    margin-left: 30px; /* Adapte esse valor para dar a distância correta do item anterior */
+}
+
+.my-ebay {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: black;
+    margin-left: 35px;
 }
 
