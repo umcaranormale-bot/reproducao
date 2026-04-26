@@ -165,5 +165,49 @@
       </div>
     </div>
   </main>
+  <script> 
+    let ultimaPosicaoScroll = window.scrollY;
+    const cabecalho = document.querySelector('.meu-cabecalho');
+    const alturaCabecalho = cabecalho.offsetHeight;
+
+    window.addEventListener('scroll', function() {
+        let posicaoAtualScroll = window.scrollY;
+
+        // 1. TOPO DA PÁGINA (Comportamento Natural)
+        if (posicaoAtualScroll <= alturaCabecalho) {
+            cabecalho.classList.remove('cabecalho-fixo', 'cabecalho-escondido', 'cabecalho-animado');
+            document.body.style.paddingTop = '0px'; 
+        } 
+        // 2. MEIO DA PÁGINA
+        else {
+            // O SETUP: A barra acabou de sumir naturalmente
+            if (!cabecalho.classList.contains('cabecalho-fixo')) {
+                // Prende no teto e esconde SEM animar
+                cabecalho.classList.add('cabecalho-fixo', 'cabecalho-escondido');
+                cabecalho.classList.remove('cabecalho-animado');
+                document.body.style.paddingTop = alturaCabecalho + 'px'; 
+                
+                // O SEGREDO AQUI: 
+                // Atualiza a memória e "Aborta" o script para não ler a animação agora!
+                ultimaPosicaoScroll = posicaoAtualScroll;
+                return; 
+            }
+
+            // SE CHEGOU ATÉ AQUI, É PORQUE A BARRA JÁ ESTAVA ESCONDIDA EM PAZ.
+            // Agora sim podemos testar a direção e animar:
+            if (posicaoAtualScroll < ultimaPosicaoScroll) {
+                // ⬆️ ROLOU PRA CIMA: Ganha animação e desce pra tela
+                cabecalho.classList.add('cabecalho-animado');
+                cabecalho.classList.remove('cabecalho-escondido');
+            } 
+            else if (posicaoAtualScroll > ultimaPosicaoScroll) {
+                // ⬇️ ROLOU PRA BAIXO: Mantém animação e sobe pra sumir
+                cabecalho.classList.add('cabecalho-animado', 'cabecalho-escondido');
+            }
+        }
+
+        ultimaPosicaoScroll = posicaoAtualScroll;
+    });
+  </script>
   </body>
 </html>
