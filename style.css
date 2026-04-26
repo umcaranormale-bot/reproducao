@@ -26,32 +26,26 @@ body {
     font-family: "Market Sans", Arial, Helvetica, sans-serif;
 }
 
-/*COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
-
-.cabecalho-fixo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-}
-
-.cabecalho-escondido {
+/*COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA
+.esconder-no-scroll {
+    /* Puxa a barra para fora da tela 
     transform: translateY(-100%); 
 }
-
-.cabecalho-animado {
-    transition: transform 0.3s ease-in-out;
-}
-
-/*COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
+COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 
 .meu-cabecalho {
     width: 100%;
 
-    /*Comandos para a animação da barra de pesquisa*/
+    /*Comandos para a animação da barra de pesquisa
     z-index: 1000; 
     background-color: #ffffff; 
-    /*Comandos para a animação da barra de pesquisa*/
+    /* 1. O STICKY NATIVO: Mantém a barra fixa no teto sem bugar a página 
+    position: sticky;
+    top: 0;
+    
+    /* 2. O MOTOR DA ANIMAÇÃO 
+    transition: transform 0.3s ease-in-out;
+    Comandos para a animação da barra de pesquisa*/
 }
 
 .cabecalho-topo {
@@ -328,7 +322,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #07465a;;
+    background-color: #07465a;
     border-radius: 16px;
     width: 77.75%;
     height: 360px;
@@ -603,6 +597,79 @@ body {
 
 .explore:hover {
     background-color: #f0f0f0; 
+}
+
+.imagem2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 16px;
+    width: 77.75%;
+    height: 360px;
+    padding-left: 69px;
+    padding-right: 0;
+    margin: 60px auto;
+    margin-bottom: 45px;
+    transform: translate(-6px, -5px);
+    position: relative;
+    overflow: hidden;
+}
+
+.textos-banner2 {
+    margin-left: 25px;
+    margin-top: 50px; 
+}
+
+.textos-banner2 h2 {
+    color: black;
+    font-size: 36px;
+    font-family: "Market Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 23px;
+}
+
+.textos-banner2 p {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 20px; 
+    font-family: "Market Sans", Arial, Helvetica, sans-serif;
+}
+
+.div-cupom2 {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cupom2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border-radius: 999rem;
+    font-weight: 700;
+    margin-bottom: 80px;
+    font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.imagem-tres {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.imagem-tres img {
+    height: 140%;
+    width: auto;
+    object-fit: cover;
+    display: block;
 }
 
 /* PARA MONITORES FULL HD MODO RETRATO */

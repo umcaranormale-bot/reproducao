@@ -164,50 +164,86 @@
         <a href="#" class="explore">Entrar</a>
       </div>
     </div>
+    <div class="textos-categorias">
+      <h2>Descubra achados raros</h2>
+    </div>
+    <div class="grade-categorias">
+      <a href="#" class="cartao-categoria">
+        <div class="fundo-cinza">
+          <img src="images/bola de basquete.webp" alt="Bola de basquete">
+        </div>
+        <span class="titulo-categoria">Memorabilia esportiva</span>
+      </a>
+      <a href="#" class="cartao-categoria">
+        <div class="fundo-cinza">
+          <img src="images/figurinhas.webp" alt="Livro de figurinhas com capa do Messi e Cristiano Ronaldo">
+        </div>
+        <span class="titulo-categoria">Figurinhas esportivas</span>
+      </a>
+      <a href="#" class="cartao-categoria">
+        <div class="fundo-cinza">
+          <img src="images/jogo de cartas.webp" alt="Caixa de cartas do Dragon Ball">
+        </div>
+        <span class="titulo-categoria">Jogos de cartas colecionáveis</span>
+      </a>
+      <a href="#" class="cartao-categoria">
+        <div class=fundo-cinza>
+          <img src="images/funko.webp" alt="Boneco pequeno com óculos">
+        </div>
+        <span class="titulo-categoria">Funko</span>
+      </a>
+      <a href="#" class="cartao-categoria">
+        <div class=fundo-cinza>
+          <img src="images/manga.webp" alt="Mangá do Naruto">
+        </div>
+        <span class="titulo-categoria">Quadrinhos</span>
+      </a>
+      <a href="#" class="cartao-categoria">
+        <div class=fundo-cinza>
+          <img src="images/wolverine.webp" alt="Action figure do Wolverine">
+        </div>
+        <span class="titulo-categoria">Figurinhas e ação</span>
+      </a>
+      <a href="#" class="cartao-categoria">
+        <div class=fundo-cinza>
+          <img src="images/jarro.webp" alt="Jarro Antigo">
+        </div>
+        <span class="titulo-categoria">Antiguidades</span>
+      </a>
+    </div>
+    <div class="imagem2">
+      <div class="textos-banner2">
+        <h2>Shopping made easy</h2>
+        <p>Desfrute da confiança, entrega segura e devoluções sem problemas.</p>
+        <div class="div-cupom2">
+          <a class="cupom2">Comece agora</a>
+        </div>
+      </div>
+      <div class="imagem-tres">
+        <img src="images/3fotos.webp">
+      </div>
+    </div>
   </main>
   <script> 
-    let ultimaPosicaoScroll = window.scrollY;
-    const cabecalho = document.querySelector('.meu-cabecalho');
+   /*const cabecalho = document.querySelector('.meu-cabecalho');
+    
+    // Mede a altura da sua barra (ex: 150px)
     const alturaCabecalho = cabecalho.offsetHeight;
 
     window.addEventListener('scroll', function() {
-        let posicaoAtualScroll = window.scrollY;
-
-        // 1. TOPO DA PÁGINA (Comportamento Natural)
-        if (posicaoAtualScroll <= alturaCabecalho) {
-            cabecalho.classList.remove('cabecalho-fixo', 'cabecalho-escondido', 'cabecalho-animado');
-            document.body.style.paddingTop = '0px'; 
+        
+        // Se você rolou a página para baixo e passou da área da barra...
+        if (window.scrollY > alturaCabecalho) {
+            // Adiciona a classe que joga a barra pra fora da tela invisível
+            cabecalho.classList.add('esconder-no-scroll');
         } 
-        // 2. MEIO DA PÁGINA
+        // Se você rolou TODO o caminho de volta para o topo...
         else {
-            // O SETUP: A barra acabou de sumir naturalmente
-            if (!cabecalho.classList.contains('cabecalho-fixo')) {
-                // Prende no teto e esconde SEM animar
-                cabecalho.classList.add('cabecalho-fixo', 'cabecalho-escondido');
-                cabecalho.classList.remove('cabecalho-animado');
-                document.body.style.paddingTop = alturaCabecalho + 'px'; 
-                
-                // O SEGREDO AQUI: 
-                // Atualiza a memória e "Aborta" o script para não ler a animação agora!
-                ultimaPosicaoScroll = posicaoAtualScroll;
-                return; 
-            }
-
-            // SE CHEGOU ATÉ AQUI, É PORQUE A BARRA JÁ ESTAVA ESCONDIDA EM PAZ.
-            // Agora sim podemos testar a direção e animar:
-            if (posicaoAtualScroll < ultimaPosicaoScroll) {
-                // ⬆️ ROLOU PRA CIMA: Ganha animação e desce pra tela
-                cabecalho.classList.add('cabecalho-animado');
-                cabecalho.classList.remove('cabecalho-escondido');
-            } 
-            else if (posicaoAtualScroll > ultimaPosicaoScroll) {
-                // ⬇️ ROLOU PRA BAIXO: Mantém animação e sobe pra sumir
-                cabecalho.classList.add('cabecalho-animado', 'cabecalho-escondido');
-            }
+            // Ele tira a classe e a barra desliza perfeitamente para o lugar de origem dela!
+            cabecalho.classList.remove('esconder-no-scroll');
         }
-
-        ultimaPosicaoScroll = posicaoAtualScroll;
-    });
+        
+    });*/
   </script>
   </body>
 </html>
