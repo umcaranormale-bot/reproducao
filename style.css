@@ -66,19 +66,24 @@ body {
 
 .ola-entrar {
     margin-left: 25px;
+    font-family: "Market Sans", Arial, Helvetica, sans-serif;
 }
 
 .ofertas {
     margin-left: 30px;
     text-decoration: none;
     color: black;
+    font-family: "Market Sans", Arial, Helvetica, sans-serif;
 }
+
 
 .ajuda-contato {
     margin-left: 25px;
     text-decoration: none;
     color: black;
+    font-family: "Market Sans", Arial, Helvetica, sans-serif;
 }
+
 
 .btn-bandeira {
     background-color: transparent; 
@@ -538,26 +543,11 @@ body {
     transform: scale(1.1); 
 }
 
-.imagem{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #07465a;;
-    border-radius: 16px;
-    width: 77.75%;
-    height: 360px;
-    padding: 0 69px;
-    margin: 60px auto;
-    margin-bottom: 45px;
-    transform: translate(-6px, -5px);
-    position: relative;
-}
-
 .banner-ofertas {
     display: flex;
     justify-content: space-between; 
     align-items: center;            
-    background-color: rgb(5, 87, 67);      
+    background-color: rgb(25, 25, 25);      
     padding: 35px 32px;             
     border-radius: 16px;
     width: 78.50%;            
@@ -584,7 +574,7 @@ body {
     font-size: 16px;
     color: #ffffff;
     margin-bottom: 0; 
-    margin-left: -12px;
+    margin-left: -9px;
     font-family: "Market Sans", Arial, Helvetica, sans-serif;
 }
 
