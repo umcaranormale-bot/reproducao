@@ -1,18 +1,18 @@
 @font-face {
-    font-family: "Market Sans"; 
-    src: url("fonts/MarketSans-Regular-WebS.woff2") format("opentype"); 
+    font-family: "Market Sans";
+    src: url("fonts/MarketSans-Regular-WebS.woff2") format("opentype");
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "Market Sans Bold"; 
-    src: url("fonts/MarketSans-Bold-WebS.woff2") format("opentype"); 
+    font-family: "Market Sans Bold";
+    src: url("fonts/MarketSans-Bold-WebS.woff2") format("opentype");
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "Helvetica Neue"; 
-    src: url("fonts/HelveticaNeueLight.otf") format("opentype"); 
+    font-family: "Helvetica Neue";
+    src: url("fonts/HelveticaNeueLight.otf") format("opentype");
     font-weight: 400;
 }
 
@@ -24,28 +24,20 @@
 
 body {
     font-family: "Market Sans", Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    /* Padding lateral assimétrico: compensa o margin-left:210px interno
+       das seções para que o conteúdo VISÍVEL (1445px) fique centralizado. */
+    padding-left: max(0px, calc((100% - 1865px) / 2));
+    padding-right: max(0px, calc((100% - 1445px) / 2));
 }
 
-/*COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA
-.esconder-no-scroll {
-    /* Puxa a barra para fora da tela 
-    transform: translateY(-100%); 
+html {
+    background-color: #ffffff;
 }
-COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 
 .meu-cabecalho {
     width: 100%;
-
-    /*Comandos para a animação da barra de pesquisa
-    z-index: 1000; 
-    background-color: #ffffff; 
-    /* 1. O STICKY NATIVO: Mantém a barra fixa no teto sem bugar a página 
-    position: sticky;
-    top: 0;
-    
-    /* 2. O MOTOR DA ANIMAÇÃO 
-    transition: transform 0.3s ease-in-out;
-    Comandos para a animação da barra de pesquisa*/
 }
 
 .cabecalho-topo {
@@ -60,63 +52,51 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 
 .ola-entrar {
     margin-left: 25px;
-    font-family: "Market Sans", Arial, Helvetica, sans-serif;
 }
 
 .ofertas {
     margin-left: 30px;
     text-decoration: none;
     color: black;
-    font-family: "Market Sans", Arial, Helvetica, sans-serif;
 }
-
 
 .ajuda-contato {
     margin-left: 25px;
     text-decoration: none;
     color: black;
-    font-family: "Market Sans", Arial, Helvetica, sans-serif;
 }
 
-
 .btn-bandeira {
-    background-color: transparent; 
-    border: none; 
-    padding-top: 1px; 
-    font-family: inherit; 
-    font-size: inherit; 
-    color: inherit; 
-    cursor: pointer; 
+    background-color: transparent;
+    border: none;
+    padding-top: 1px;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 8px;
     margin-left: 430px;
 }
 
-.link-entrar {
-    color: #0968f6;
-}
-
-.link-entrar:hover {
-    text-decoration: underline;
-}
-
+.link-entrar,
 .link-cadastrar {
     color: #0968f6;
 }
 
+.link-entrar:hover,
 .link-cadastrar:hover {
     text-decoration: underline;
 }
 
 .br-portugues {
-    background-color: transparent; 
-    border: none; 
-    padding: 0; 
-    font-family: inherit; 
-    font-size: unset; 
-    color: inherit; 
-    cursor: pointer; 
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: unset;
+    color: inherit;
+    cursor: pointer;
     margin-left: 18px;
     display: flex;
     align-items: center;
@@ -124,47 +104,35 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 }
 
 .vender {
-    background-color: transparent; 
-    border: none; 
-    padding: 0; 
-    font-family: inherit; 
-    font-size: inherit; 
-    color: inherit; 
-    cursor: pointer; 
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
     margin-left: 32px;
 }
 
-.icone-bandeira {
-    width: 25px;
-    height: 25px;
-    object-fit: cover; 
-    border-radius: 2px;
-}
-
+.icone-bandeira,
 .icone-globo {
-    width: 15px;
-    height: 15px;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 2px;
 }
 
-.lista-itens {
-    display: flex;
-    align-items: center; 
-    gap: 4px; 
-    color: black;
-    margin-left: 32px; 
-    cursor: pointer;
-}
+.icone-bandeira { width: 25px; height: 25px; }
+.icone-globo   { width: 15px; height: 15px; }
 
+.lista-itens,
 .my-ebay {
     display: flex;
     align-items: center;
     gap: 4px;
     color: black;
-    margin-left: 36px;
     cursor: pointer;
 }
+
+.lista-itens { margin-left: 32px; }
+.my-ebay     { margin-left: 36px; }
 
 .sino-carrinho {
     display: flex;
@@ -172,41 +140,31 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     gap: 4px;
 }
 
-.btn-icones-sino {
-    background-color: transparent; 
-    border: none; 
-    padding: 0; 
-    margin-left: 22px;
+.btn-icones-sino,
+.btn-icones-carrinho {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
     color: inherit;
 }
 
-.btn-icones-carrinho {
-    background-color: transparent; 
-    border: none; 
-    padding-top: 5px; 
-    margin-left: 20px;
-    cursor: pointer;
-    color: inherit;
-}
+.btn-icones-sino     { margin-left: 22px; }
+.btn-icones-carrinho { margin-left: 20px; padding-top: 5px; }
 
 .area-pesquisa {
     display: flex;
-    padding: 13px 200px;
+    padding: 13px 200px 18px 200px;
     gap: 15px;
     margin-top: 3px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 18px
 }
 
 .compras-categoria {
     display: flex;
     align-items: center;
     color: #707070;
-    display: flex;
     flex-shrink: 10;
     font-size: .75rem;
-    height: auto;
     line-height: 1.1;
     width: 60px;
     text-align: left;
@@ -215,8 +173,8 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 }
 
 .compras-categoria svg {
-    flex-shrink: 0; 
-    margin-left: 4px; /* Desgruda a setinha da palavra "categoria" */
+    flex-shrink: 0;
+    margin-left: 4px;
 }
 
 .retangulo-base {
@@ -225,7 +183,7 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     border: 2px solid #191919;
     border-radius: 50px;
     height: 45px;
-    width: 100%; 
+    width: 100%;
     max-width: 1030px;
     padding: 0 10px;
     background-color: white;
@@ -236,7 +194,6 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     outline: none;
     background: transparent;
     font-size: 16px;
-    font-family: inherit;
     color: #191919;
     margin-right: 200px;
     flex: 1;
@@ -271,7 +228,6 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     background: #3665f3;
     color: white;
     border-radius: 2.75rem;
-    margin-left: 0;
     font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
     font-size: 15px;
     width: 10.5rem;
@@ -289,13 +245,11 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     margin-bottom: 8px;
     margin-left: -10px;
     cursor: pointer;
-    font-size: .6900rem;
+    font-size: .69rem;
     text-decoration: none;
 }
 
-.btn-avancada:hover{
-    color: #0968f6;
-}
+.btn-avancada:hover { color: #0968f6; }
 
 .textos {
     display: flex;
@@ -303,7 +257,7 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     margin-left: 425px;
     font-size: 12px;
     gap: 30px;
-    padding-top: 10px
+    padding-top: 10px;
 }
 
 .link-categoria {
@@ -315,27 +269,23 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 .link-categoria:hover {
     color: #0968f6;
     text-decoration: underline;
-    cursor: pointer;
 }
 
-.imagem{
+.imagem {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #07465a;
     border-radius: 16px;
-    width: 77.75%;
     height: 360px;
     padding: 0 69px;
-    margin: 60px auto;
-    margin-bottom: 45px;
-    transform: translate(-6px, -5px);
+    margin: 60px 0 45px 210px;
     position: relative;
 }
 
 .textos-banner {
     margin-left: 25px;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 .textos-banner h2 {
@@ -349,12 +299,20 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 .textos-banner p {
     font-size: 16px;
     color: #d7f4f6;
-    margin-bottom: 20px; 
-    font-family: "Market Sans", Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
 }
 
-.div-cupom {
+.div-cupom,
+.div-cupom2,
+.div-explore,
+.div-comprar-mundo,
+.div-cacar {
     text-decoration: none;
+    cursor: pointer;
+}
+
+.div-pdt,
+.div-validade {
     cursor: pointer;
 }
 
@@ -364,7 +322,7 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     justify-content: center;
     font-size: 16px;
     width: 181px;
-    height: 2.50rem;
+    height: 2.5rem;
     border: none;
     background-color: #d7f4f6;
     color: #07465a;
@@ -375,15 +333,11 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     cursor: pointer;
 }
 
-.div-pdt {
-    text-decoration: underline #d7f4f6;
-    cursor: pointer;
-}
+.div-pdt { text-decoration: underline #d7f4f6; }
 
 .pdt {
     font-size: .75rem;
     color: #d7f4f6;
-    font-family: "Market Sans", Arial, Helvetica, sans-serif;
 }
 
 .imagem-carro {
@@ -408,24 +362,16 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     gap: 6px;
 }
 
-.bolinha {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: 1px solid white; 
-    background-color: transparent; 
-    cursor: pointer;
-}
-
+.bolinha,
 .bolinha-ativa {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    border: 1px solid #d7f4f6; 
-    background-color: #d7f4f6;
     cursor: pointer;
-    
 }
+
+.bolinha       { border: 1px solid white;   background-color: transparent; }
+.bolinha-ativa { border: 1px solid #d7f4f6; background-color: #d7f4f6; }
 
 .controles-carrossel {
     display: flex;
@@ -435,7 +381,8 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     gap: 8px;
 }
 
-.btn-setinha, .btn-pause {
+.btn-setinha,
+.btn-pause {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -446,26 +393,15 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     border: none;
     color: #191919;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-pause {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
     border-radius: 100%;
     background-color: #ffffffe6;
-    border: none;
-    color: #191919;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.btn-setinha:hover {
-    background-color: #f1f1f1;
-}
+.btn-setinha:hover { background-color: #f1f1f1; }
 
 .icone-pause {
     stroke: currentColor;
@@ -474,7 +410,7 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 }
 
 .textos-categorias {
-   margin-top: 20px;
+    margin-top: 20px;
 }
 
 .textos-categorias h2 {
@@ -485,10 +421,7 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     font-weight: bold;
     line-height: 32px;
     height: 32px;
-    font-stretch: 100%;
-    interpolate-size: allow-keywords;
     letter-spacing: 0.5px;
-    box-sizing: border-box;
 }
 
 .grade-categorias {
@@ -526,29 +459,23 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     max-width: 100%;
     transition: transform 0.3s ease;
 }
+
 .titulo-categoria {
     font-size: 14px;
     line-height: 1.2;
-    font-family: "Market Sans", Arial, Helvetica, sans-serif;
     object-fit: contain;
 }
 
-.cartao-categoria:hover .fundo-cinza img {
-    transform: scale(1.1); 
-}
+.cartao-categoria:hover .fundo-cinza img { transform: scale(1.1); }
 
 .banner-ofertas {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;            
-    background-color: rgb(25, 25, 25);      
-    padding: 35px 32px;             
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(25, 25, 25);
+    padding: 35px 32px;
     border-radius: 16px;
-    width: 78.50%;            
-    margin-left: 205px;            
-    margin-right: 25px;
-    margin-top: 72px;
-    margin-bottom: 20px;
+    margin: 72px 0 20px 210px;
     position: relative;
 }
 
@@ -559,7 +486,6 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
     font-weight: 700;
     margin-bottom: 8px;
-    margin-top: 0;
     margin-left: -10px;
     cursor: pointer;
 }
@@ -567,14 +493,7 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 .texto-ofertas p {
     font-size: 16px;
     color: #ffffff;
-    margin-bottom: 0; 
     margin-left: -9px;
-    font-family: "Market Sans", Arial, Helvetica, sans-serif;
-}
-
-.div-explore {
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .explore {
@@ -589,15 +508,12 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     color: rgb(5, 87, 67);
     border-radius: 24px;
     font-weight: 700;
-    margin-bottom: 0;
     font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
-.explore:hover {
-    background-color: #f0f0f0; 
-}
+.explore:hover { background-color: #f0f0f0; }
 
 .imagem2 {
     display: flex;
@@ -605,26 +521,21 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     align-items: center;
     background-color: #f7f7f7;
     border-radius: 16px;
-    width: 77.75%;
     height: 360px;
     padding-left: 69px;
-    padding-right: 0;
-    margin: 60px auto;
-    margin-bottom: 45px;
-    transform: translate(-6px, -5px);
+    margin: 60px 0 45px 210px;
     position: relative;
     overflow: hidden;
 }
 
 .textos-banner2 {
     margin-left: 25px;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 .textos-banner2 h2 {
     color: black;
     font-size: 36px;
-    font-family: "Market Sans", Arial, Helvetica, sans-serif;
     font-weight: 700;
     margin-bottom: 23px;
 }
@@ -632,13 +543,7 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
 .textos-banner2 p {
     font-size: 15px;
     color: black;
-    margin-bottom: 20px; 
-    font-family: "Market Sans", Arial, Helvetica, sans-serif;
-}
-
-.div-cupom2 {
-    text-decoration: none;
-    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .cupom2 {
@@ -672,41 +577,345 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
     display: block;
 }
 
-/* PARA MONITORES FULL HD MODO RETRATO */
+/* ============================================================
+   Seções a partir de "Dê um upgrade em seu veículo"
+   ============================================================ */
 
+.fundo-marca img {
+    min-width: 0;
+    max-width: 95%;
+    max-height: 95%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.cartao-categoria:hover .fundo-marca img { transform: scale(1.05); }
+
+.bloco-ofertas-hoje { margin-top: 35px; }
+
+.subtitulo-ofertas-hoje {
+    font-size: 14px;
+    color: #707070;
+    margin-left: 210px;
+    margin-top: 4px;
+}
+
+/* Carrossel "Ofertas de hoje" */
+.container-carrossel-ofertas {
+    position: relative;
+    margin-top: 13px;
+}
+
+.grade-produtos {
+    display: flex;
+    margin-left: 210px;
+    gap: 18px;
+    padding-bottom: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-color: #c0c0c0 transparent;
+    scrollbar-width: thin;
+}
+
+.grade-produtos::-webkit-scrollbar              { height: 8px; }
+.grade-produtos::-webkit-scrollbar-track        { background: transparent; margin: 0 8px; }
+.grade-produtos::-webkit-scrollbar-thumb        { background-color: #c0c0c0; border-radius: 999px; }
+.grade-produtos::-webkit-scrollbar-thumb:hover  { background-color: #a0a0a0; }
+
+.cartao-produto {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #191919;
+    width: 280px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.seta-carrossel {
+    position: absolute;
+    top: calc(50% - 14px);
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    color: #191919;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.seta-carrossel:hover { background-color: #f1f1f1; }
+.seta-esquerda        { left: 200px; }
+.seta-direita         { right: 12px; }
+
+.fundo-produto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #f5f5f5;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+.fundo-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    mix-blend-mode: multiply;
+    filter: contrast(1.02);
+}
+
+.cartao-produto:hover .fundo-produto img { transform: scale(1.06); }
+
+.btn-favorito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #191919;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s, color 0.2s;
+    z-index: 2;
+}
+
+.btn-favorito:hover { color: #e53238; }
+
+.tag-desconto {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff200;
+    color: #191919;
+    font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: 6px 10px;
+    border-top-right-radius: 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.titulo-produto {
+    font-size: 15px;
+    color: #191919;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 42px;
+}
+
+.preco-produto {
+    font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #191919;
+}
+
+.preco-antigo {
+    font-size: 13px;
+    font-weight: 400;
+    color: #707070;
+    text-decoration: line-through;
+    margin-left: 6px;
+}
+
+/* Banner roxo "Compre pelo mundo" */
+.banner-mundo {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #583aee;
+    border-radius: 16px;
+    height: 380px;
+    padding-left: 69px;
+    margin: 60px 0 45px 210px;
+    position: relative;
+    overflow: hidden;
+}
+
+.textos-mundo {
+    margin-left: 25px;
+    align-self: center;
+    z-index: 2;
+    max-width: 38%;
+    flex-shrink: 0;
+}
+
+.textos-mundo h2 {
+    color: #ffffff;
+    font-size: 38px;
+    font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 18px;
+    line-height: 1.15;
+}
+
+.textos-mundo p {
+    font-size: 15px;
+    color: #e8defc;
+    margin-bottom: 26px;
+    line-height: 1.45;
+}
+
+.btn-comprar-mundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 150px;
+    height: 42px;
+    border: none;
+    background-color: #e8defc;
+    color: #2a1782;
+    border-radius: 999rem;
+    font-weight: 700;
+    font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-comprar-mundo:hover { background-color: #d4c4ff; }
+
+.imagens-mundo {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.imagens-mundo img {
+    max-width: 100%;
+    height: 100%;
+    width: auto;
+    display: block;
+    transform: scale(1.45);
+    transform-origin: center right;
+}
+
+/* Footer */
+.rodape {
+    background-color: #ffffff;
+    padding: 36px 0 18px 0;
+    margin-top: 60px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rodape-grade {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 0 0 210px;
+    flex-wrap: wrap;
+}
+
+.coluna-rodape {
+    min-width: 140px;
+    flex: 1;
+}
+
+.coluna-rodape h4 {
+    font-family: "Market Sans Bold", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #191919;
+    margin-bottom: 12px;
+    letter-spacing: 0.1px;
+}
+
+.coluna-rodape h4.subtitulo-comunidade { margin-top: 22px; }
+
+.coluna-rodape ul        { list-style: none; }
+.coluna-rodape ul li     { margin-bottom: 7px; }
+
+.coluna-rodape ul li a {
+    font-size: 12px;
+    color: #707070;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.coluna-rodape ul li a:hover {
+    color: #0968f6;
+    text-decoration: underline;
+}
+
+.link-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rodape-base {
+    margin-top: 28px;
+    padding: 18px 0 0 210px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 11px;
+    color: #707070;
+}
+
+.rodape-base p { line-height: 1.6; }
+
+.rodape-base a {
+    color: #0968f6;
+    text-decoration: none;
+    margin: 0 2px;
+}
+
+.rodape-base a:hover { text-decoration: underline; }
+
+.icone-info {
+    vertical-align: middle;
+    color: #707070;
+}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+
+/* Tablet / Full HD retrato */
 @media (max-width: 1080px) {
-    .cabecalho-topo {
-        padding: 0 20px;
-    }
-
-    .btn-bandeira {
-        margin-left: auto;
-    }
-
-    .area-pesquisa {
-        padding: 13px 20px;
-        flex-wrap: wrap;
-    }
-
-    .retangulo-base {
-        width: 100%;
-        max-width: 100%;
-        margin: 10px 0;
-    }
-
-    .caixa-de-pesquisa {
-        margin-right: 10px;
-    }
-
-    .btn-pesquisar {
-        margin-left: auto;
-    }
-
-    .textos {
-        margin-left: 20px;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
+    .cabecalho-topo  { padding: 0 20px; }
+    .btn-bandeira    { margin-left: auto; }
+    .area-pesquisa   { padding: 13px 20px; flex-wrap: wrap; }
+    .retangulo-base  { width: 100%; max-width: 100%; margin: 10px 0; }
+    .caixa-de-pesquisa { margin-right: 10px; }
+    .btn-pesquisar   { margin-left: auto; }
+    .textos          { margin-left: 20px; flex-wrap: wrap; gap: 15px; }
 
     .imagem {
         width: 95%;
@@ -716,48 +925,168 @@ COMANDOS PARA ANIMAÇÃO DA BARRA DE PESQUISA*/
         flex-direction: column;
         transform: none;
     }
-
-    .textos-banner {
-        width: 100%;
-    }
-
+    .textos-banner   { width: 100%; }
     .textos-banner h2 {
         height: auto;
         margin-left: 0;
         margin-bottom: 20px;
         text-align: center;
     }
-
     .textos-banner p {
         transform: none;
         margin: 0 auto 20px auto;
         text-align: center;
     }
+    .cupom    { transform: none; margin: 0 auto 25px auto; }
+    .div-pdt  { transform: none; text-align: center; margin-bottom: 30px; }
+    .imagem-carro     { width: 100%; max-width: 600px; transform: none; margin: 0 auto; }
+    .imagem-carro img { width: 100%; }
 
-    .cupom {
-        transform: none;
-        margin: 0 auto 25px auto;
-    }
+    .subtitulo-ofertas-hoje { margin-left: 20px; }
+    .grade-produtos  { margin-left: 20px; margin-right: 20px; gap: 16px; }
+    .cartao-produto  { width: 210px; }
+    .seta-esquerda   { left: 4px; }
+    .seta-direita    { right: 4px; }
 
-    .div-pdt {
+    .banner-mundo {
+        width: 95%;
+        height: auto;
+        padding: 30px 20px;
+        margin: 40px auto;
+        flex-direction: column;
         transform: none;
-        text-align: center;
-        margin-bottom: 30px;
     }
+    .textos-mundo    { max-width: 100%; margin-left: 0; text-align: center; }
+    .imagens-mundo   { width: 100%; justify-content: center; }
+    .imagens-mundo img { margin-right: 0; max-height: 220px; }
 
-    .imagem-carro {
-        width: 100%;
-        max-width: 600px;
-        transform: none;
-        margin: 0 auto;
-    }
-    
-    .imagem-carro img {
-        width: 100%;
-    }
+    .rodape-grade    { padding: 0 20px; gap: 30px; }
+    .rodape-base     { padding: 18px 20px 0 20px; }
 }
 
+/* Tablet pequeno */
+@media (max-width: 900px) {
+    .ofertas, .ajuda-contato, .vender, .lista-itens, .my-ebay { display: none; }
 
+    .cabecalho-topo {
+        height: 36px;
+        font-size: 12px;
+        padding: 0 12px;
+        gap: 12px;
+    }
+    .ola-entrar          { margin-left: 0; }
+    .btn-bandeira        { margin-left: auto; }
+    .br-portugues        { margin-left: 12px; }
+    .btn-icones-sino     { margin-left: 12px; }
+    .btn-icones-carrinho { margin-left: 8px; }
 
+    .textos {
+        margin-left: 0;
+        padding: 10px 16px;
+        gap: 18px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+    .textos::-webkit-scrollbar { display: none; }
+    .link-categoria { flex-shrink: 0; }
 
+    .textos-categorias h2,
+    .subtitulo-ofertas-hoje { margin-left: 24px; }
 
+    .grade-categorias {
+        margin-left: 24px;
+        margin-right: 24px;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .cartao-categoria { width: calc(33.333% - 16px); margin-left: 0; }
+    .fundo-cinza      { width: 100%; }
+
+    .banner-ofertas { width: calc(100% - 32px); margin-left: 16px; margin-right: 16px; }
+    .imagem2 {
+        width: calc(100% - 32px);
+        flex-direction: column;
+        height: auto;
+        padding: 30px 24px;
+    }
+    .textos-banner2 { margin-left: 0; text-align: center; }
+    .cupom2         { margin: 0 auto 30px auto; }
+    .imagem-tres img { height: auto; width: 100%; max-height: 240px; }
+
+    .grade-produtos { margin-left: 24px; margin-right: 24px; }
+    .cartao-produto { width: 220px; }
+    .seta-carrossel { width: 32px; height: 32px; }
+
+    .rodape-grade  { padding: 0 24px; gap: 24px; }
+    .coluna-rodape { min-width: calc(50% - 16px); }
+    .rodape-base   { padding: 18px 24px 0 24px; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .ola-entrar     { font-size: 11px; }
+    .br-portugues   { display: none; }
+    .btn-bandeira   { gap: 4px; font-size: 11px; }
+    .icone-bandeira { width: 18px; height: 18px; }
+
+    .area-pesquisa  { padding: 10px 12px; gap: 10px; }
+    .compras-categoria,
+    .btn-categoria,
+    .linha-divisoria,
+    .btn-avancada   { display: none; }
+    .retangulo-base { height: 42px; }
+    .btn-pesquisar  { width: 100%; height: 42px; font-size: 14px; }
+
+    .textos { font-size: 11px; gap: 14px; }
+
+    .textos-categorias h2   { font-size: 20px; margin-left: 16px; }
+    .subtitulo-ofertas-hoje { font-size: 13px; margin-left: 16px; }
+
+    .grade-categorias { margin-left: 16px; margin-right: 16px; gap: 14px; }
+    .cartao-categoria { width: calc(50% - 8px); }
+
+    .banner-ofertas {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 24px 16px;
+        width: calc(100% - 24px);
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    .texto-ofertas a { font-size: 22px; margin-left: 0; }
+    .texto-ofertas p { margin-left: 0; }
+
+    .imagem2         { width: calc(100% - 24px); margin-left: 12px; margin-right: 12px; }
+    .textos-banner2 h2 { font-size: 26px; }
+
+    .grade-produtos { margin-left: 12px; margin-right: 12px; }
+    .cartao-produto { width: 180px; }
+    .seta-carrossel { display: none; }
+
+    .banner-mundo {
+        width: calc(100% - 24px);
+        margin-left: 12px;
+        margin-right: 12px;
+        padding: 24px 16px;
+    }
+    .textos-mundo h2 { font-size: 26px; }
+    .imagens-mundo img { transform: none; max-height: 180px; }
+
+    .rodape-grade  { flex-direction: column; padding: 0 16px; gap: 24px; }
+    .coluna-rodape { min-width: 100%; }
+    .rodape-base   { padding: 16px 16px 0 16px; font-size: 10px; }
+}
+
+/* Mobile muito pequeno */
+@media (max-width: 380px) {
+    .gh-logo svg, #gh-logo  { width: 80px !important; height: auto; }
+    .cartao-produto         { width: 150px; }
+    .textos-categorias h2   { font-size: 18px; }
+    .textos-banner h2,
+    .textos-banner2 h2,
+    .textos-mundo h2        { font-size: 22px; }
+}
