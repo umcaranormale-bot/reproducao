@@ -37,7 +37,7 @@ html {
 }
 
 .meu-cabecalho {
-    width: 100%;
+    width: 114%;
 }
 
 .cabecalho-topo {
@@ -45,7 +45,7 @@ html {
     align-items: center;
     height: 32px;
     padding: 0 180px;
-    font-size: .75rem;
+    font-size: 12px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: #191919;
 }
